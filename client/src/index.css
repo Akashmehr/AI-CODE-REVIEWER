@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* Makes sizing predictable */
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0f172a;
+  /* Dark navy background */
+  color: #f1f5f9;
+  /* Light text */
+  min-height: 100vh;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+
+/* Input focus outline */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid #38bdf8;
+  outline-offset: 2px;
+}
