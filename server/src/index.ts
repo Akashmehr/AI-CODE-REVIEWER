@@ -9,7 +9,6 @@ import reviewRoutes from './routes/reviewRoutes';
 
 
 dotenv.config();
-console.log('OPENROUTER KEY:', process.env.OPENROUTER_API_KEY);
 
 const app = express();
 
