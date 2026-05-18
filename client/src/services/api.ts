@@ -7,22 +7,18 @@ const API = axios.create({
     baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5000/api',
 });
 
+
 // ─── REQUEST INTERCEPTOR ──────────────────────────────────────
 // Runs BEFORE every request is sent
 // Automatically adds JWT token to Authorization header
 // So you never forget to add it manually
 
-API.interceptors.request.use((config) => {
-    // Get token from localStorage (saved during login)
+API.interceptors.request.use((config: InternalAxiosRequestConfig) => {
     const token = localStorage.getItem('token');
-
     if (token) {
-        // Add token to request header
-        // Backend's authMiddleware checks this header
         config.headers.Authorization = `Bearer ${token}`;
     }
-
-    return config; // Send the request with the token
+    return config;
 });
 
 // ─── AUTH API CALLS ───────────────────────────────────────────
