@@ -12,7 +12,13 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+    origin: [
+        'http://localhost:5173',              // Local development
+        'https://ai-code-reviewer-rho-jade.vercel.app/',        // Your Vercel URL
+    ],
+    credentials: true,
+}));
 
 app.use(express.json());
 
