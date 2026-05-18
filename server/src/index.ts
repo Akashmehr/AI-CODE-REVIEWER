@@ -14,13 +14,9 @@ const app = express();
 
 app.use(cors({
     origin: [
-        'http://localhost:5173',
-        'https://ai-code-reviewer-rho-jade.vercel.app',
-        // Add any other vercel URLs you saw earlier
-        'https://ai-code-reviewer-git-main-akashmehrs-projects.vercel.app',
-        'https://ai-code-reviewer-cns7nf50n-akashmehrs-projects.vercel.app',
-    ],
-    credentials: true,
+        'http://localhost:5173',              // Local development
+        'https://ai-code-reviewer-three-tawny.vercel.app' // Varcel URl
+    ]
 }));
 
 app.use(express.json());
